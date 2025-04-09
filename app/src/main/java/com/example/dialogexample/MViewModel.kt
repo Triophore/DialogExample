@@ -2,6 +2,7 @@ package com.example.dialogexample
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import com.example.dialogexample.ui.events.Dialog
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
@@ -19,7 +20,8 @@ class MViewModel(application: Application): AndroidViewModel(application) {
 
     // Example usage
     fun triggerLogoutDialog() {
-        showDialog(Dialog.LogOut(
+        showDialog(
+            Dialog.LogOut(
             context = getApplication<Application>().baseContext,
             title = "Logout",
             message = "Are you sure?",
@@ -31,7 +33,8 @@ class MViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun triggerContactCareDialog() {
-        showDialog(Dialog.ContactCustomerCare(
+        showDialog(
+            Dialog.ContactCustomerCare(
             context = getApplication<Application>().baseContext,
             onPositiveClick = {
                 // Handle contact customer care logic

@@ -1,6 +1,7 @@
-package com.example.dialogexample
+package com.example.dialogexample.ui.events
 
 import android.content.Context
+import com.example.dialogexample.R
 
 sealed class Dialog(
     open val title: String? = null,

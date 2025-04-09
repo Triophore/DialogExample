@@ -1,4 +1,4 @@
-package com.example.dialogexample
+package com.example.dialogexample.ui.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -28,6 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.Dialog
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.ui.res.painterResource
+import com.example.dialogexample.ui.events.Dialog
 
 
 @Composable
