@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DialogExample</string>
+    <string name="button_text_yes">Yes</string>
+    <string name="button_text_no">No</string>
+    <string name="title_text_contact_customer_care">Customer Care</string>
+    <string name="message_text_contact_customer_care">Please contact customer care</string>
+    <string name="button_text_ok">Okay</string>
+</resources>
