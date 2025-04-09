@@ -27,8 +27,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.Dialog
 import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.dialogexample.ui.events.Dialog
+import com.example.dialogexample.ui.screens.Screen
+import com.example.dialogexample.ui.theme.DialogExampleTheme
 
 
 @Composable
@@ -78,13 +82,13 @@ fun CustomDialog(
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.spacedBy(16.dp),
-                        modifier = Modifier.width(IntrinsicSize.Min)
+                        modifier = Modifier.width(IntrinsicSize.Max)
                     ) {
                         it.logo?.let { id ->
                             Image(
                                 painter = painterResource(id),
                                 contentDescription = null,
-                                modifier = Modifier.size(64.dp),
+                                modifier = Modifier.size(50.dp),
                             )
                         }
 
@@ -130,5 +134,14 @@ fun CustomDialog(
                 }
             }
         }
+    }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun DialogPreview() {
+    DialogExampleTheme {
+        CustomDialog(Dialog.LogOut(LocalContext.current, "Logout", "Are you sure?", {}))
     }
 }
